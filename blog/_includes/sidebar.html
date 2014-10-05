@@ -1,8 +1,0 @@
-<div class="sidebar">
-		<ul>
-			<li><h4>Recent posts</h4></li>
-			{% for post in site.posts limit: 5 %}
-			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-		  {% endfor %}
-		</ul>
-</div>
