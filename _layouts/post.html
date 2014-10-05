@@ -1,0 +1,39 @@
+
+{% include postheader.html %}
+
+<div class="container">
+	<div class="sixteen columns">
+		<h2>{{ page.title }}</h2>
+		<span class="post-date">{{ page.date | date_to_long_string }}</span>
+
+		<div class="content">
+			{{ content | replace_first:'<img','<!--' | replace_first: '/>','--!>'  }}
+		</div>
+
+		{% include twitter_plug.html %}
+	</div>
+	<!--
+	<div class="four columns">
+		{% include sidebar.html %}
+	</div>
+	<!-->
+	{% if page.previous %} 
+		<strong><a class="post-navigation older" rel="prev" href="{{ page.previous.url }}">&larr; Older</a></strong>
+	{% endif %}
+	{% if page.next %} 
+		<strong><a class="post-navigation newer" rel="next" href="{{ page.next.url }}">Newer &rarr;</a></strong>
+	{% endif %}
+
+	
+
+</div>
+
+<div class="comments-container container">
+	{% include comments.html %}
+</div>
+
+
+{% include footer.html %}
+
+{% include google_analytics.html %}
+

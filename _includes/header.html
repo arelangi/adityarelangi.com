@@ -1,0 +1,18 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="{{ site.url }}/assets/css/skeleton/stylesheets/combined.css"/>
+	<title>{{ page.title }}</title>
+	<meta name="application-name" content="Aditya Relangi's Thoughts"/>
+	<meta name="description" content="Aditya Relangi's blog"/>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+				{% for page in site.pages_list %}
+				  &nbsp;&nbsp;&nbsp;
+				  <a href="{{ page[1]  }}">{{ page[0] }}</a>
+				{% endfor %}
+		</div>
+	</div>
