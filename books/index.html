@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+  
+<meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'>
+<title>Aditya Relangi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name=”description” content=”Personal website of Aditya Relangi”/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta name="google-site-verification" content="3gdxFG9KizsIHiw40kAv_068LQytJ9fmhQVL9CrWG-4" />
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+
+
+<style>
+    @font-face { font-family: Castorgate; src: url('../assets/fonts/castorgate/CASTOR.ttf'); } 
+
+    .hero {
+        text-align: center;
+        margin: 6em auto 3em;
+        }
+    .hero h1 {
+        font-size: 1000%;
+        margin: 0;
+        padding: 0;
+        font-weight: 100;
+        font-family: Castorgate;
+        }
+
+    .container { margin-top: 10em; }
+
+    img{
+      width: 256px;
+      height: 256px;
+    }
+
+    p{
+      font-size: 12pt;
+    }
+
+    .item { 
+    	width: 20%; 
+	    margin-bottom: 15px;
+	}
+
+	.col-center{
+	  margin-left: 20%;
+	}
+
+</style>
+
+</head>
+<body>
+    
+    <div class="hero masthead">
+        
+            <h1 id="name">aditya relangi</h1>        
+        
+    </div>
+
+<div class="container col-center" id="container">
+	<div class="item"><a href="http://google.com"><img src="../assets/img/books/2015/missing-person.jpg"></a></div>
+</div>
+    
+</body>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/masonry.pkgd.js"></script>
+
+<script>
+	var container = document.querySelector('#container');
+	console.log(container);
+	var msnry = new Masonry( container, {
+	  // options
+	  columnWidth: 200,
+	  itemSelector: '.item',
+	  gutter: 10
+	});
+</script>
+</html>
