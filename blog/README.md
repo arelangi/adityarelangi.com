@@ -1,4 +1,1 @@
-datasays
-========
-
-Making sense of data
+Hey, this is my blog
