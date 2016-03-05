@@ -3,7 +3,5 @@ description: "Aditya Relangi's website"
 
 url: "http://adityarelangi.com/"
 
-
-markdown: rdiscount
 permalink: title
 highlighter: pygments
