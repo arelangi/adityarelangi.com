@@ -1,0 +1,108 @@
+
+<html>
+
+<head>
+	<link rel="stylesheet" href="http://127.0.0.1:4000/assets/css/skeleton/stylesheets/combined.css"/>
+	<link rel="stylesheet" href="http://127.0.0.1:4000/assets/css/skeleton/stylesheets/syntax.css"/>
+	<title>Vegeta - A Simple Golang Wrapper for connecting to APIs</title>
+	<meta name="application-name" content="The Data Says"/>
+	<meta name="description" content="Vegeta - A Simple Golang Wrapper for connecting to APIs" />
+	<meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+				<a href="http://adityarelangi.com">Website</a>
+				<a href="http://adityarelangi.com/blog">Blog</a>
+				
+		</div>
+	</div>
+
+<div class="container">
+	<div class="sixteen columns">
+		<h2>Vegeta - A Simple Golang Wrapper for connecting to APIs</h2>
+		<span class="post-date">21 March 2016</span>
+
+		<div class="content">
+			<p>A lot of application development these days has to do with connecting to APIs. This means however different the underlying service we all end up implementing the same authentication mechanisms over and over, which is why I decided to go ahead and implement a simple library in <a href="https://golang.org/">Go</a>, <a href="https://github.com/logzer0/vegeta" title="vegeta">vegeta</a>
+<!--excerpt--></p>
+
+<p>The library is very simple and is centered around the Handler object.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">type</span><span class="x"> </span><span class="n">Handler</span><span class="x"> </span><span class="k">struct</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">Token</span><span class="x">    </span><span class="kt">string</span><span class="x">
+	</span><span class="n">User</span><span class="x">     </span><span class="kt">string</span><span class="x">
+	</span><span class="n">Password</span><span class="x"> </span><span class="kt">string</span><span class="x">
+	</span><span class="n">Headers</span><span class="x">  </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="x">
+	</span><span class="n">Request</span><span class="x">  </span><span class="n">http</span><span class="o">.</span><span class="n">Request</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+</div>
+
+<p>As you can observe the exposed fields are the standard ones that are used in making most API calls. The Handler object can be initiated by calling the NewHandler function</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">func</span><span class="x"> </span><span class="n">NewHandler</span><span class="p">()</span><span class="x"> </span><span class="o">*</span><span class="n">Handler</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="k">return</span><span class="x"> </span><span class="o">&amp;</span><span class="n">Handler</span><span class="p">{</span><span class="n">Headers</span><span class="o">:</span><span class="x"> </span><span class="nb">make</span><span class="p">(</span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)}</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+</div>
+
+<p>Once the fields are set up, you can jsut make a call to the method GetRequest</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">func</span><span class="x"> </span><span class="p">(</span><span class="n">h</span><span class="x"> </span><span class="o">*</span><span class="n">Handler</span><span class="p">)</span><span class="x"> </span><span class="n">GetRequest</span><span class="p">(</span><span class="n">url</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">(</span><span class="n">output</span><span class="x"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="kt">error</span><span class="p">)</span><span class="x">
+</span></code></pre>
+</div>
+
+<p>The library is nowhere near completion. I plan on developing it as is needed. Let me know if you have feedback by opening an issue on the <a href="https://github.com/logzer0/vegeta" title="vegeta">repo</a>.</p>
+
+
+		</div>
+
+	</div>
+	<!--
+	<div class="four columns">
+		<div class="sidebar">
+		<ul>
+			<li><h4>Recent posts</h4></li>
+			
+			<li><a href="/vegeta">Vegeta - A Simple Golang Wrapper for connecting to APIs</a></li>
+		  
+			<li><a href="/looking-ahead-2016">2016 - Looking Ahead</a></li>
+		  
+			<li><a href="/looking-back-2015">2015 - Looking Back - Year in Review</a></li>
+		  
+			<li><a href="/quotes">Quotes</a></li>
+		  
+			<li><a href="/book-review-the-emergency-a-personal-history">Book Review - The Emergency A Personal History</a></li>
+		  
+		</ul>
+</div>
+
+	</div>
+	<!-->
+	 
+		<strong><a class="post-navigation older" rel="prev" href="/blog//looking-ahead-2016">&larr; Older</a></strong>
+	
+	
+
+	
+
+</div>
+
+
+
+</body>
+</html>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55416753-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
