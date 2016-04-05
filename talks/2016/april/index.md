@@ -314,7 +314,7 @@ I need this program to run all the time, which makes it a good candidate to run 
 ]
 .right-column[
 
-- [Amazon Dash Button] (http://www.amazon.com/b?ie=UTF8&node=10667898011) - 5$
+- [Amazon Dash Button](http://www.amazon.com/b?ie=UTF8&node=10667898011) - 5$
 
 - [Raspberry Pi](https://www.raspberrypi.org/blog/raspberry-pi-2-on-sale/) - 35$
 
