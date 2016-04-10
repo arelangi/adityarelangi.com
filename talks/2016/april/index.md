@@ -271,7 +271,8 @@ for {
         continue
       }
       arp := arpLayer.(*layers.ARP)
-      if net.HardwareAddr(arp.SourceHwAddress).String() == <AMZN Dash Mac Address> {
+      if net.HardwareAddr(arp.SourceHwAddress).String() 
+      == <AMZN Dash Mac Address> {
           //Do something or don't
       }
 
