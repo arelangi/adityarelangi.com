@@ -1,10 +1,9 @@
 name: "Aditya Relangi"
 description: "Aditya Relangi's website"
 
-url: "http://localhost:4000"
+url: "http://adityarelangi.com/"
 
-paginate: 10
 
-markdown: rdiscount
+markdown: kramdown
 permalink: title
-pygments: true
+highlighter: rouge
