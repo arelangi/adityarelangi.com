@@ -6,6 +6,11 @@ class: center, middle, inverse
 # Building a Self-hosted .red[Serverless] System
 .footnote[talk by [@arelangi](http://adityarelangi.com)]
 
+???
+- Welcome
+- Excited
+- Questions
+
 ---
 layout: false
 class: center, middle, inverse
@@ -26,20 +31,13 @@ class: class: center, middle,inverse
 ![monolith inforgraphic](monolith.png)
 
 ???
-- Long ago we had the monolithic architecture where every component is embodied in a single and often cumbersome application framework
-- All the functionality was bundled together
-- Everyone worked on the same application
-- It wasn't modular, the system was tightly coupled
-- Re-usability meant duplicating and copy/paste
+- Long ago we had the monolithic architecture where all the components are packaged into a single, cumbersome framework
+- Numerous teams worked on the same application for months on end
+- We had tightly coupled system where making changes was really hard
+- We had to co-ordinate across many teams to ensure any changes we make doesn't break somebody else's stuff
 - Maintenance, upgrades and delpoyments were hell
-- These are applications that were bound to evolve from the waterfall model
 - Although, modularity was always something we achieved for, we did not really get to achieve it until web architectures came into the picture
-- We realized monoliths aren't going to work and the solution was
-
-
-class: class: center, middle,inverse
-![SOA](SOA.png)
-
+- We realized monoliths aren't going to work and came up with Service Oriented Architecture
 
 ---
 
@@ -64,14 +62,13 @@ And all were in the wrong!”
 ???
 
 - The arrival of SOA coincided with the dotcom era
-- SOA/Service Oriented Architecture
-- We broke down the application components of our monolith into a collection of services that communicate with each other and these  services are often implemented in deployment monoliths and can belong to the same application.
-- The entire theme of that era was 'Modularity', 'Modularity and Java'
+- The theme of that era was 'Modularity', 'Modularity and Java'
+- With SOA we broke down the components of our monolith into a collection of services that communicate with each other and these  services were often deployed together.
+- SOA also meant deploying multiple services as a monolith.
 - Instead of duplicating code we started writing libraries
-- Even though SOA was a step in the right direction, we didn't go far enough
+- Even though SOA was a step in the right direction, it didn't go far enough
 - What we ended up with is building something like this
 - A monolith, that wasn't really a monolith, but a monster
-- The problem with SOA is that they are often implemented in deployment monoliths.
 - Then came the time for my generation, the millenial generation to step up and define 2010s
 
 
@@ -93,29 +90,16 @@ class: class: center, middle,inverse
 ![microservices inforgraphic](microservices.png)
 
 ???
-- SOA is a broad term, microservices is a specific subset of this
-- Microservices continued where SOA stopped short
+- From SOA, we moved onto microservices. 
+- SOA is a very broad term, microservices is a specific subset of this
+- Microservices evolved from where SOA stopped short
 - Instead of modularizing but still being tied to monoliths, we broke everything into small atomic pieces that are focused on doing a small task
 - Instead of having a single large database we have multiple smaller databases for each microservice
 - One microservice goes down, no big deal, the rest of your system is operational while you work on the fix
 
 
 - a software architecture design pattern, in which complex applications are composed of small, independent processes communicating with each other using language-agnostic APIs. These services are small, highly decoupled and focus on doing a small task.
-
 - And this culture lead to the industry embracing agile which meant changing requirements, smaller developments times, faster deploys and everyone was completely satisfied and lived happily ever after
-
----
-
-class: center, middle, inverse
-### Death Star Architecture Diagrams
-![Right-aligned image](microservice-hell.jpg)
-
-???
-- Ofcourse, there are issues.
-- There is such a thing as too much of a good thing
-- We now need to manage all the microservices that we built
-- We are now writing new software to manage the software we already wrote
-- New ideas and architectures come with their own set of problems
 
 ---
 
@@ -124,11 +108,21 @@ class: center, middle, inverse
 
 ???
 - If you ask me, I think this image corectly represents the state we are in
-- This doesn't mean everything is bad and we've made no progress
-- Like new ideas and architectures come with their own set of problems, they also open us up for new opportunities.
+- Why? I'll tell you why?
 
 ---
+class: center, middle, inverse
+### Death Star Architecture Diagrams
+![Right-aligned image](microservice-hell.jpg)
 
+???
+- Ofcourse, there are issues.
+- There is such a thing as too much of a good thing
+- We need to manage all the microservices that we built and we are writing code to maintain the code we already wrote
+- Is there a way to solve this problem? We may not be able to resolve the dependencies but we can at least make it easy to manage all the microservices we are running.
+- And part of that follows this philosophy
+
+---
 class: center,middle,inverse,big
 
 The best code is .red[no code] at all .small[<br/>- Jeff Atwood]
@@ -142,11 +136,7 @@ The best infrastructure is .red[no infrastructure] at all
 - It took time for people to realize that what applies to code can also apply to infrastructure
 - What's one way to solve this problem?
 
-
-class: center,middle,inverse, big
-
 Nobody enjoys .red[maintaining Infrastructure]
-<hr/>
 Not all microservices needs to be running .red[all the time]
 
 
@@ -374,7 +364,11 @@ class: center,middle,inverse
 
 ???
 
-- go-tweet-go
+- devopsdaysaustin-tweet
+- Send out a tweet
+- zexyphantom/tweet-go
+- 15
+- Hello #devopsdaysaustin
 
 ---
 
@@ -639,7 +633,11 @@ class: center,middle,inverse
 
 
 ???
-- Does this mean there are no more servers?
+- Let's head over to Granda EE to take a look at the app.
+- Let's create this new function, and improve our website to send out welcome emails whenever a user shows registers
+
+
+vladsofab@mailinator.com
 
 ---
 
@@ -654,14 +652,13 @@ func CreateFunction(w http.ResponseWriter, r *http.Request) {
 	//get user input
 	runTime := r.PostFormValue("runtime")
 	code := r.PostFormValue("code")
-	imageName := strings.ToLower(r.PostFormValue("imagename"))
 
 	//Create the Tar file
 	dFile := CreateDockerFile(runTime, code)
-	cFile := CreateCodeFile(code)
-	tarPath := CreateTarFile(dFile, cFile)
+	tarPath := CreateTarFile(dFile, code)
 
 	//Create New Docker Image
+	dockerBuildContext, err := os.Open(tarPath)
 	buildOptions := types.ImageBuildOptions{
 		Tags: []string{imageName},
 	}
@@ -676,20 +673,13 @@ func CreateFunction(w http.ResponseWriter, r *http.Request) {
 ```
 ???
 
-- Let's create this new function, and improve our website to send out welcome emails whenever a user shows registers
 
-email-go
-Sends out an email
-zexyphantom/mail-go
-15
-
-vladsofab@mailinator.com
 
 ---
 
 class:  middle,inverse
 
-## Generated Dockerfile for Golang
+### Sample Dockerfile for Golang
 ```Dockerfile
 From golang:1.7
 
@@ -702,19 +692,22 @@ RUN go get gopkg.in/mailgun/mailgun-go.v1
 #Build and Install app 
 RUN go install app
 
+#Run
 ENTRYPOINT ["/go/bin/app"]
-
 ```
 
-## Generated Dockerfile for Python
+### Sample Dockerfile for Python
 
 ```Dockerfile
 FROM python:3
 
+#Copy the file
 ADD tweet.py /
 
+#External packages
 RUN pip install tweepy
 
+#Run
 ENTRYPOINT [ "python", "./tweet.py" ]
 ```
 
@@ -734,3 +727,9 @@ class: center, middle,inverse
 class: center, middle,inverse
 
 ![questions](questions.jpg)
+
+.red[Aditya Relangi]
+
+.red[adi@logzero.email]
+
+.red[@arelangi]
