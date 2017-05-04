@@ -26,16 +26,15 @@ class: class: center, middle,inverse
 ![monolith inforgraphic](monolith.png)
 
 ???
-- Initially, that is pre-2000 and during 1990s we had the monolithic architecture
-- monolithic approach where every component is embodied in a single and often cumbersome application framework
-- All the functionality was bundled into a single application
+- Long ago we had the monolithic architecture where every component is embodied in a single and often cumbersome application framework
+- All the functionality was bundled together
 - Everyone worked on the same application
 - It wasn't modular, the system was tightly coupled
 - Re-usability meant duplicating and copy/paste
 - Maintenance, upgrades and delpoyments were hell
 - These are applications that were bound to evolve from the waterfall model
 - Although, modularity was always something we achieved for, we did not really get to achieve it until web architectures came into the picture
-- We realized monoliths aren't going to work and came up with a solution
+- We realized monoliths aren't going to work and the solution was
 
 
 class: class: center, middle,inverse
@@ -45,7 +44,7 @@ class: class: center, middle,inverse
 ---
 
 class: class: center, middle,inverse
-### SOA
+### Servie Oriented Architecture
 ![microservices inforgraphic](elephant.gif)
 
 “…And so these men of Indostan
@@ -63,18 +62,20 @@ And all were in the wrong!”
 -- John Godfrey Saxe
 
 ???
-- And with that we entered the dotcom era 
-- We came up with a new solution to our monolith problem
-- SOA/Service Oriented Architecture
-- The theme of that era was 'Modularity', 'Modularity and Java'
-- Instead of duplicating code we started building libraries
-- We broke down the monolith into components it comprises of
-- And build whatever the hell this is
-- Even though SOA was a step in the right direction, we didn't go far enough
 
+- The arrival of SOA coincided with the dotcom era
+- SOA/Service Oriented Architecture
+- We broke down the application components of our monolith into a collection of services that communicate with each other and these  services are often implemented in deployment monoliths and can belong to the same application.
+- The entire theme of that era was 'Modularity', 'Modularity and Java'
+- Instead of duplicating code we started writing libraries
+- Even though SOA was a step in the right direction, we didn't go far enough
 - What we ended up with is building something like this
 - A monolith, that wasn't really a monolith, but a monster
+- The problem with SOA is that they are often implemented in deployment monoliths.
 - Then came the time for my generation, the millenial generation to step up and define 2010s
+
+
+- SOA is an architectural pattern in which application components provide services to other components. However, in SOA those components can belong to the same application. On the other hand, in microservices these components are suites of independently deployable services
 
 ---
 
@@ -92,13 +93,12 @@ class: class: center, middle,inverse
 ![microservices inforgraphic](microservices.png)
 
 ???
-- Okay, we came up with microservices
-- Microservices begin where SOA stopped short
-- Instead of modularizing but still being tied to monoliths, we broke everything into
-small atomic pieces
-- We have a huge common database for everything? Well, instead maintain a separate database for each microservice
+- SOA is a broad term, microservices is a specific subset of this
+- Microservices continued where SOA stopped short
+- Instead of modularizing but still being tied to monoliths, we broke everything into small atomic pieces that are focused on doing a small task
+- Instead of having a single large database we have multiple smaller databases for each microservice
 - One microservice goes down, no big deal, the rest of your system is operational while you work on the fix
-- You want to swap out something new by something newer, go for it cowboy
+
 
 - a software architecture design pattern, in which complex applications are composed of small, independent processes communicating with each other using language-agnostic APIs. These services are small, highly decoupled and focus on doing a small task.
 
@@ -131,7 +131,7 @@ class: center, middle, inverse
 
 class: center,middle,inverse,big
 
-The best code is .red[no code] at all .small[<br/>- Coding Horror]
+The best code is .red[no code] at all .small[<br/>- Jeff Atwood]
 
 <hr/>
 
@@ -242,8 +242,9 @@ CONS
 
 - The first offering was launched in 2014, Lambda supports Python, Node, C#, Java
 - Azure supports C#, F#, Node.js, Python, PHP, batch, bash, or any executable
-- Google Node.js, still in Beta
 - Openwhisk supports Node.js, Swift and executables too
+- Google Node.js, still in Beta
+
 
 ---
 
@@ -576,10 +577,21 @@ func RunContainer(urlPath string, img Image, runResponse chan string) {
 
 class: inverse, middle,center
 
-## Exploiting the docker .red[CMD ]
+## Leveraging the docker .red[ENTRYPOINT ]
+
+```Dockerfile
+ENTRYPOINT ["executable", "param1", "param2"]
+```
 
 ???
-If you want to run your <command> without a shell then you must express the command as a JSON array and give the full path to the executable. This array form is the preferred format of CMD. Any additional parameters must be individually expressed as strings in the array
+- An entrypoint in docker allows to configure a container to run as an executable
+- ENTRYPOINT has two forms
+	- Exec form 
+	- Shell form
+- When we use the entryform we can basically append arguments after all the elements of the netrypoint. This basically allows us to pass in arguments to the entry point
+
+- When we provide Command line arguments to docker run <image> these are appended after all elements in an exec form ENTRYPOINT, and will override all elements specified using CMD. This allows us to pass in arguments to the entry point, i.e., docker run <image> -d will pass the -d argument to the entry point.
+
 
 ---
 
@@ -613,14 +625,7 @@ func RunContainer(userMessage string, urlPath string, img Image, runResponse cha
 
 ???
 
-- Now that you've noticed it, you might ask what the big deal is
-- To know this you need to understand how CMD and ENTRYPOINT work in Docker
-- Let's take a look at the docker file
-- This particular example echoes out whatever argument we give it
-- When you make your container runnable by adding either ENTRYPOINT or CMD, you can override the CMD arguments
-- As you've seen from the example, we are exploiting the CMD to pass on a message into the container
-- It is upto the application inside the container to do what it wants to do with it
- 
+- It is upto the application inside the container to do what it wants to do with it 
 - Now you might be wondering, this is all well and good, but nobody said I have to dockerize my code to be Serverless. I just want to write the code and not worry about any of the Ops stuff at all
 - Yes, I agree, but listen if you are not ready to do some Ops at least, we can't provide all this amazing stuff
 - You say you aren't interested any more? 
@@ -680,16 +685,45 @@ zexyphantom/mail-go
 
 vladsofab@mailinator.com
 
-
 ---
 
+class:  middle,inverse
+
+## Generated Dockerfile for Golang
+```Dockerfile
+From golang:1.7
+
+#Create the dir
+ADD . /go/src/app
+
+#External packages
+RUN go get gopkg.in/mailgun/mailgun-go.v1
+
+#Build and Install app 
+RUN go install app
+
+ENTRYPOINT ["/go/bin/app"]
+
+```
+
+## Generated Dockerfile for Python
+
+```Dockerfile
+FROM python:3
+
+ADD tweet.py /
+
+RUN pip install tweepy
+
+ENTRYPOINT [ "python", "./tweet.py" ]
+```
+
+---
 
 
 class: center, middle,inverse
 
 .bigred[.dis[Serverless]]
-
-<!--![kendall jenner](giphy.gif)-->
 
 
 ???
