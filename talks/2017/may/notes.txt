@@ -1,0 +1,18 @@
+- Even though modularity has always been a part of the conversation the advent of web, allowed us to take this concept forward and we built the SOA
+- Control the failure surface
+- Isolation
+
+
+- Slide 10
+- Provide an example - Seattle Times
+
+Slide 13 
+
+- so, the talk is titled - Why are you building a serverless system?
+
+
+Slide 15
+- Distinguish the stateless nature of serverless application and the stateful nature of serverless system
+
+- Slide 18
+Follow up with a schematic showing what happened
