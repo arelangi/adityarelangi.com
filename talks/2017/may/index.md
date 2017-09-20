@@ -714,10 +714,11 @@ ENTRYPOINT [ "python", "./tweet.py" ]
 ---
 
 
-class: center, middle,inverse
+class: center, middle
 
 .bigred[.dis[Serverless]]
 
+[Code repo](https://github.com/logzer0/granda)
 
 ???
 - No, they are present, only you don't see them
@@ -733,3 +734,5 @@ class: center, middle,inverse
 .red[adi@logzero.email]
 
 .red[@arelangi]
+
+
