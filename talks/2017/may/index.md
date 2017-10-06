@@ -3,8 +3,8 @@ layout: true
 class: center, middle, inverse
 ---
 
-# Building a Self-hosted .red[Serverless] System
-.footnote[talk by [@arelangi](http://adityarelangi.com)]
+# Demystifying .red[Serverless] Systems
+.footnote[talk by [Aditya Relangi](http://adityarelangi.com)]
 
 ???
 - Welcome
@@ -74,7 +74,7 @@ And all were in the wrong!”
 
 - SOA is an architectural pattern in which application components provide services to other components. However, in SOA those components can belong to the same application. On the other hand, in microservices these components are suites of independently deployable services
 
----
+
 
 class: class: center, middle,inverse
 ![kendall jenner](pepsi-meme.jpg)
@@ -502,7 +502,7 @@ class: inverse
 	router.HandleFunc(routerPath, ContainerRunHandler)
 ```
 
- ContainerRunHandler got called, which in turn calls _RunContainer_
+ ContainerRunHandler was called, which in turn calls _RunContainer_
 
 
 ```go
@@ -714,7 +714,7 @@ ENTRYPOINT [ "python", "./tweet.py" ]
 ---
 
 
-class: center, middle
+class: center, middle, inverse
 
 .bigred[.dis[Serverless]]
 
