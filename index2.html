@@ -1,0 +1,253 @@
+<html>
+
+<head>
+    <title>Log Zero Tech</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+            margin: 0;
+        }
+        /*  SECTIONS  ============================================================================= */
+        
+        .section {
+            clear: both;
+            padding: 0px;
+            margin: 0px;
+        }
+        /*  GROUPING  ============================================================================= */
+        
+        .group:before,
+        .group:after {
+            content: "";
+            display: table;
+        }
+        
+        .group:after {
+            clear: both;
+        }
+        
+        .group {
+            zoom: 1;
+            /* For IE 6/7 (trigger hasLayout) */
+        }
+        /*  GRID COLUMN SETUP   ==================================================================== */
+        
+        .col {
+            display: block;
+            float: left;
+            margin: 1% 0 1% 1.6%;
+        }
+        
+        .col:first-child {
+            margin-left: 0;
+        }
+        /* all browsers except IE6 and lower */
+        /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+        
+        @media only screen and (max-width: 480px) {
+            .col {
+                margin: 1% 0 1% 0%;
+            }
+        }
+        /*  GRID OF THREE   ============================================================================= */
+        
+        .span_3_of_3 {
+            width: 100%;
+        }
+        /*
+.span_2_of_3 {
+	width: 66.13%; 
+}
+*/
+        
+        .span_1_of_3 {
+            width: 32.26%;
+        }
+        /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+        
+        @media only screen and (max-width: 480px) {
+            .span_3_of_3 {
+                width: 100%;
+            }
+            .span_2_of_3 {
+                width: 100%;
+            }
+            .span_1_of_3 {
+                width: 100%;
+            }
+        }
+        
+        .maincontent {
+            height: 100%;
+            clear: both;
+            width: 80%;
+            font-size: 0.8125em;
+            max-width: 92.3em;
+            margin: 0 auto;
+            padding: 5em;
+            color: #333;
+            position: relative;
+        }
+        
+        .container {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+        
+        .logo {
+            font-size: 6.4em;
+            margin-top: 1.2em;
+        }
+        
+        .copy-text {
+            font-size: 2.6em;
+            margin-top: 4em;
+        }
+        
+        .projects,
+        .people {
+            font-size: 1.2em;
+        }
+        
+        .project-sub {
+            background-color: #E8E8E8
+        }
+        
+        .people-sub {
+            background-color: #FFFFFF
+        }
+        
+        #goku {
+            width: 22.87em;
+        }
+        
+        .headwrap {
+            background-color: #F0F0F0;
+        }
+        
+        .project-sub>p,
+        .people-sub>p {
+            margin: 1em;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .head {
+            position: fixed;
+            top: 2%;
+            right: 2%;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+
+        <div class="headwrap">
+            <div class="head">
+                <a href="mailto:adi@logzero.email">Say hello!</a>
+            </div>
+            <div class="maincontent">
+                <div class="section group">
+                    <div class="col span_1_of_3">
+                        <p class="logo">Aditya Relangi<br><br> </p>
+                    </div>
+
+                    <div class="span_2_of_3">
+                        <p class="copy-text">I work for a bank as a software engineer.<br><br> I get to work on things like Machine Learning, Artificial Intelligence and Blockchains(lucky, right?).<br><br> I ocassionally speak at tech conferences and sometimes write.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="maincontent">
+            <div class="section group projects">
+                <div class="col span_1_of_3">
+                    <h3>PROJECTS</h3>
+                </div>
+
+                <div class="col span_1_of_3 project-sub">
+                    <p>Akira</p>
+                    <p>Akira is a virtual assistant that understands natural language queries.</p>
+                    <p>Akira integrates several data sources to provide information and to track and execute repetitive tasks.</p>
+                    <p>It's a work in progress.</p>
+                </div>
+                <div class="col span_1_of_3 project-sub">
+                    <p><a href="https://github.com/logzer0/granda">Granda</a></p>
+                    <p>Granda is a self hosted serverless framework written in Go.</p>
+                    <p>It uses Docker as the container engine and a Golang web server to manage the state.</p>
+                    <p>It is written with the idea of demystifying how serverless platforms work.</p>
+                </div>
+            </div>
+            <div class="section group projects">
+                <div class="col span_1_of_3">
+
+                </div>
+                <div class="col span_1_of_3 project-sub">
+                    <p>Akira Finance</p>
+                    <p>Akira Finance is part of Akira, it's an application to track the income and expenditure .</p>
+                    <p>It interfaces directly with the user's bank accounts and visualizes the expenditure data.</p>
+                    <p>It also supports an sms bot to perform a specific set of functions.</p>
+                </div>
+                <div class="col span_1_of_3 project-sub">
+                    <p><a href="https://github.com/arelangi">And more...</a></p>
+                    <p>Apart from the select few listed above, I also work on a bunch of other projects.</p>
+                    <p>That's a lot about me.</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="headwrap">
+            <div class="maincontent">
+                <div class="section group people">
+                    <div class="col span_1_of_3">
+                        <h3>EXTRAS</h3>
+                    </div>
+                    <div class="col span_1_of_3 people-sub">
+                        <p>Books</p>
+                        <p><a href="https://www.goodreads.com/review/list/17992908-aditya-relangi?shelf=read">Books I read</a></p>
+                        <p><a href="/books">Books I wrote reviews on</a></p>
+                    </div>
+                    <div class="col span_1_of_3 people-sub">
+                        <p>Talks</p>
+                        <p><a href="/talks">Talks I gave</a></p>
+                    </div>
+                </div>
+
+                <div class="section group people">
+                    <div class="col span_1_of_3">
+                    </div>
+                    <div class="col span_1_of_3 people-sub">
+                        <!--<img id="goku" src="img/landscape.png">-->
+                        <p>Stuff I write</p>
+                        <p>Sometimes I write, not as much as I want to.</p>
+                        <p> You can find it <a href="/blog">here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
