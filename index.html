@@ -1,18 +1,20 @@
+<!doctype html>
 <html>
 
 <head>
-    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=”description” content="Personal Website of Aditya Relangi" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-    <style>
+    <!--title-->
+    <title>Personal Website of Aditya Relangi</title>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
         body {
             background-color: #FFFFFF;
             font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
             font-weight: 300;
             margin: 0;
+            min-width: 320px;
         }
         /*  SECTIONS  ============================================================================= */
         
@@ -48,37 +50,6 @@
         .col:first-child {
             margin-left: 0;
         }
-        /* all browsers except IE6 and lower */
-        /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
-        
-        @media only screen and (max-width: 480px) {
-            .col {
-                margin: 1% 0 1% 0%;
-            }
-        }
-        /*  GRID OF THREE   ============================================================================= */
-        
-        .span_3_of_3 {
-            width: 100%;
-        }
-        
-        .span_1_of_3 {
-            width: 32.26%;
-        }
-        /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-        
-        @media only screen and (max-width: 480px) {
-            .span_3_of_3 {
-                width: 100%;
-            }
-            .span_2_of_3 {
-                width: 100%;
-            }
-            .span_1_of_3 {
-                width: 100%;
-            }
-        }
-        
         .maincontent {
             height: 100%;
             clear: both;
@@ -108,6 +79,7 @@
         .copy-text {
             font-size: 2.6em;
             margin-top: 4em;
+            overflow: hidden;
         }
         
         .projects,
@@ -149,7 +121,89 @@
             position: fixed;
             top: 2%;
             right: 2%;
+            z-index: 99;
         }
+        @media screen and (max-width: 1170px) {
+            .logo {
+                font-size: 4.4em;
+                margin-top: 2.2em;
+            }
+            .maincontent{
+                height: auto;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            .logo {
+                font-size: 4em;
+                margin-top: 2.3em;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .span_1_of_3{
+                width: 100%;
+                float: none;
+                overflow: hidden;
+                height: auto;
+            }
+            .logo {
+                font-size: 3em;
+                margin: 20px 0 0;
+            }
+            .maincontent{
+                width: 90%;
+                padding: 30px 10px;
+                overflow: hidden;
+            }
+            .copy-text {
+                font-size: 1.4em;
+                margin-top: 0;
+                overflow: hidden;
+            }
+            .container{
+                overflow: hidden;
+                position: relative;
+            }
+            .span_3_of_3 {
+                width: 100%;
+                margin: 0 0 10px;
+            }
+            .span_2_of_3 {
+                width: 100%;
+                margin: 0 0 10px;
+            }
+            .span_1_of_3 {
+                width: 100%;
+                margin: 0 0 10px;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .col {
+                margin: 1% 0 1% 0%;
+            }
+        }
+        /*  GRID OF THREE   ============================================================================= */
+        
+        .span_3_of_3 {
+            width: 100%;
+        }
+        
+        .span_1_of_3 {
+            width: 32.26%;
+        }
+        /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+        
+        @media only screen and (max-width: 767px) {
+            .span_3_of_3 {
+                width: 100%;
+            }
+            .span_2_of_3 {
+                width: 100%;
+            }
+            .span_1_of_3 {
+                width: 100%;
+            }
+        }
+
     </style>
 
     <title>Aditya Relangi</title>
@@ -158,10 +212,7 @@
 
 <body>
 
-
-
     <div class="container">
-
 
         <div class="headwrap">
             <div class="head">
@@ -170,16 +221,21 @@
             <div class="maincontent">
                 <div class="section group">
                     <div class="col span_1_of_3">
-                        <p class="logo">Aditya Relangi<br><br> </p>
+                        <p class="logo">Aditya Relangi
+                            <br>
+                            <br> </p>
                     </div>
 
                     <div class="span_2_of_3">
-                        <p class="copy-text">I work for a bank as a software engineer.<br><br> I get to work on things like Machine Learning, Artificial Intelligence and Blockchains(lucky, right?).<br><br> I ocassionally speak at tech conferences and sometimes write.</p>
+                        <p class="copy-text">I work for a bank as a software engineer.
+                            <br>
+                            <br> I get to work on things like Machine Learning, Artificial Intelligence and Blockchains(lucky, right?).
+                            <br>
+                            <br> I ocassionally speak at tech conferences and sometimes write.</p>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <div class="maincontent">
             <div class="section group projects">
