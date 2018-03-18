@@ -3,7 +3,7 @@ layout: true
 class: center, middle, inverse
 ---
 
-# Demystifying .red[Serverless] Systems
+# Demystifying .red[Serverless] Platforms
 .footnote[talk by [Aditya Relangi](http://adityarelangi.com)]
 
 ???
@@ -19,7 +19,7 @@ class: center, middle, inverse
 ???
 ## In this talk I'm going to cover three topics
 1. What is Serverless, how did we end up here?
-2. A high-level overview of what is needed to build a serverless systems
+2. A high-level overview of what is needed to build a serverless Platforms
 3. An in-depth look at an implementation along with some demos in between
 
 Let's get started
@@ -241,11 +241,11 @@ CONS
 class: center,middle,inverse
 layoud: true
 
-# Why would you .red[build] a Serverless system?
+# Why would you .red[build] a Serverless Platform?
 
 ???
 
-I've just now mentioned all the major players in the Serverless space and their offerings, why are we embarking on building our own Serverless system?
+I've just now mentioned all the major players in the Serverless space and their offerings, why are we embarking on building our own Serverless Platform?
 
 1. There is a certain amount of vendor tie-in when using any of these products. It isn't easy to use S3 with the Google Cloud Functions and write to your own DB. There's a certain level of tie-in with all these products.
 2. I will quote Richard Feynman on this "What I cannot create, I do not understand"
@@ -257,7 +257,7 @@ With that, let's see How would we go about it?
 class: center,middle,inverse
 layoud: true
 
-# How would you .red[build] a Serverless system?
+# How would you .red[build] a Serverless Platform?
 
 ???
 
@@ -269,7 +269,7 @@ How would we go about it?
 
 class: center,middle,inverse
 
-.heading[What makes a serverless system?]
+.heading[What makes a serverless Platform?]
 
 
  .medium[Be able to .red[invoke] applications]
