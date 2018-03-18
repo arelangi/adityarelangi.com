@@ -425,16 +425,16 @@ func CreateFunctionHandler(w http.ResponseWriter, r *http.Request){
 }
 
 func CreateFunction(img Image) (response FunctionCreatedResponse) {
-    //Generate unique URL endpoint
-	routerPath := getNewPath(funcName)
-	router.HandleFunc(routerPath, ContainerRunHandler)
-
-	//Pull image and send a response
+    //Pull image and send a response
 	if !checkIfImageExists(tagName) {
 		if err := cli.ImagePull(ctx, imageName, types.ImagePullOptions{});err==nil{
             reponse = true
         }    
 	}
+
+	//Generate unique URL endpoint
+	routerPath := getNewPath(funcName)
+	router.HandleFunc(routerPath, ContainerRunHandler)
 	
 	// Update the DB and return
     pathToImage[routerPath] = img
