@@ -3,11 +3,11 @@
 <html lang="en">
 
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="http://adityarelangi.com//favicon.ico?">
-	<link rel="stylesheet" href="http://adityarelangi.com//assets/css/skeleton/stylesheets/combined.css"/>
-	<link rel="stylesheet" href="http://adityarelangi.com//assets/css/skeleton/stylesheets/syntax.css"/>
-	<link rel="stylesheet" href="http://adityarelangi.com//assets/css/expounder.css"/>
-	 <script src="http://adityarelangi.com//assets/js/expounder.min.js"></script> 
+	<link rel="shortcut icon" type="image/x-icon" href="http://localhost:4000/favicon.ico?">
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/skeleton/stylesheets/combined.css"/>
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/skeleton/stylesheets/syntax.css"/>
+	<link rel="stylesheet" href="http://localhost:4000/assets/css/expounder.css"/>
+	 <script src="http://localhost:4000/assets/js/expounder.min.js"></script> 
 	<title>Change Data Capture --> Kafka --> Go Consumer --> Apache Ignite --> Zeppelin</title>
 	<meta name="application-name" content="The Data Says"/>
 	<meta name="description" content="Change Data Capture --> Kafka --> Go Consumer --> Apache Ignite --> Zeppelin" />
@@ -35,50 +35,49 @@
 
 <h4 id="get-ip">Get IP</h4>
 
-<p><code class="highlighter-rouge">ipconfig getifaddr en0</code></p>
+<p><code class="language-plaintext highlighter-rouge">ipconfig getifaddr en0</code></p>
 
 <h4 id="ip">IP</h4>
 
-<p><code class="highlighter-rouge">10.251.69.52</code></p>
+<p><code class="language-plaintext highlighter-rouge">10.251.69.52</code></p>
 
 <h3 id="run-zookeeper">Run Zookeeper</h3>
 
-<p><code class="highlighter-rouge">docker run -d --name zookeeper -p 2181:2181 jplock/zookeeper</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -d --name zookeeper -p 2181:2181 jplock/zookeeper</code></p>
 
 <h4 id="run-kafka">Run Kafka</h4>
 
-<p><code class="highlighter-rouge">docker run -d --name kafka -p 7203:7203 -p 9092:9092 -e KAFKA_ADVERTISED_HOST_NAME=10.251.69.52 -e ZOOKEEPER_IP=10.251.69.52 ches/kafka</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -d --name kafka -p 7203:7203 -p 9092:9092 -e KAFKA_ADVERTISED_HOST_NAME=10.251.69.52 -e ZOOKEEPER_IP=10.251.69.52 ches/kafka</code></p>
 
 <h4 id="create-topic">Create Topic</h4>
 
-<p><code class="highlighter-rouge">docker run --rm ches/kafka kafka-topics.sh --create --topic senz --replication-factor 1 --partitions 1 --zookeeper 10.251.69.52:2181</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run --rm ches/kafka kafka-topics.sh --create --topic senz --replication-factor 1 --partitions 1 --zookeeper 10.251.69.52:2181</code></p>
 
 <h4 id="list-topics">List Topics</h4>
 
-<p><code class="highlighter-rouge">docker run --rm ches/kafka kafka-topics.sh --list --zookeeper 10.251.69.52:2181</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run --rm ches/kafka kafka-topics.sh --list --zookeeper 10.251.69.52:2181</code></p>
 
 <h4 id="create-publisher">Create Publisher</h4>
 
-<p><code class="highlighter-rouge">docker run --rm --interactive ches/kafka kafka-console-producer.sh --topic senz --broker-list 10.251.69.52:9092</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run --rm --interactive ches/kafka kafka-console-producer.sh --topic senz --broker-list 10.251.69.52:9092</code></p>
 
 <p>or</p>
 
-<p><code class="highlighter-rouge">kafka-console-producer --topic senz --broker-list 10.251.69.52:9092</code></p>
+<p><code class="language-plaintext highlighter-rouge">kafka-console-producer --topic senz --broker-list 10.251.69.52:9092</code></p>
 
 <h4 id="create-consumer">Create Consumer</h4>
 
-<p><code class="highlighter-rouge">docker run --rm ches/kafka kafka-console-consumer.sh --topic senz --from-beginning --zookeeper 10.251.69.52:2181</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run --rm ches/kafka kafka-console-consumer.sh --topic senz --from-beginning --zookeeper 10.251.69.52:2181</code></p>
 
 <h4 id="build-golang-docker-consumer">Build Golang Docker consumer</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd /repos/irl/consumer
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /repos/irl/consumer
 docker build --tag zexyphantom/conzumer:1.0 .
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="run-golang-docker-consumer">Run Golang Docker Consumer</h4>
 
-<p><code class="highlighter-rouge">docker run -it --name conzumer zexyphantom/conzumer:1.0</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -it --name conzumer zexyphantom/conzumer:1.0</code></p>
 
 <hr --!>
 
@@ -86,63 +85,55 @@ docker build --tag zexyphantom/conzumer:1.0 .
 
 <h4 id="start-zookeeper">Start Zookeeper</h4>
 
-<p><code class="highlighter-rouge">docker run -it --rm --name zookeeper -p 2181:2181 -p 2888:2888 -p 3888:3888 debezium/zookeeper:0.8</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -it --rm --name zookeeper -p 2181:2181 -p 2888:2888 -p 3888:3888 debezium/zookeeper:0.8</code></p>
 
 <h4 id="start-kafka">Start Kafka</h4>
-<p><code class="highlighter-rouge">docker run -it --rm --name kafka -p 9092:9092 --link zookeeper:zookeeper debezium/kafka:0.8</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -it --rm --name kafka -p 9092:9092 --link zookeeper:zookeeper debezium/kafka:0.8</code></p>
 
 <h4 id="start-mysql">Start MySQL</h4>
-<p><code class="highlighter-rouge">docker run -it --rm --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=debezium -e MYSQL_USER=mysqluser -e MYSQL_PASSWORD=mysqlpw debezium/example-mysql:0.8</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -it --rm --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=debezium -e MYSQL_USER=mysqluser -e MYSQL_PASSWORD=mysqlpw debezium/example-mysql:0.8</code></p>
 
 <h4 id="start-kafka-connect">Start Kafka Connect</h4>
 
-<p><code class="highlighter-rouge">docker run -it --rm --name connect -p 8083:8083 -e GROUP_ID=1 -e CONFIG_STORAGE_TOPIC=my_connect_configs -e OFFSET_STORAGE_TOPIC=my_connect_offsets --link zookeeper:zookeeper --link kafka:kafka --link mysql:mysql debezium/connect:0.8</code></p>
+<p><code class="language-plaintext highlighter-rouge">docker run -it --rm --name connect -p 8083:8083 -e GROUP_ID=1 -e CONFIG_STORAGE_TOPIC=my_connect_configs -e OFFSET_STORAGE_TOPIC=my_connect_offsets --link zookeeper:zookeeper --link kafka:kafka --link mysql:mysql debezium/connect:0.8</code></p>
 
 <h4 id="activate-the-connector">Activate the connector</h4>
-<div class="highlighter-rouge"><pre class="highlight"><code>curl -X POST \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -X POST \
   http://localhost:8083/connectors/ \
   -H 'Accept: application/json' \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
   -H 'Postman-Token: 53a55b1b-eb22-49f3-8fbf-a80d485ff348' \
   -d '{ "name": "inventory-connector", "config": { "connector.class": "io.debezium.connector.mysql.MySqlConnector", "tasks.max": "1", "database.hostname": "mysql", "database.port": "3306", "database.user": "debezium", "database.password": "dbz", "database.server.id": "184054", "database.server.name": "dbserver1", "database.whitelist": "inventory", "database.history.kafka.bootstrap.servers": "kafka:9092", "database.history.kafka.topic": "dbhistory.inventory" } }'
-  ```
-  
-  or in Postman call `localhost:8083/connectors/`
-  ```
-  { "name": "inventory-connector", "config": { "connector.class": "io.debezium.connector.mysql.MySqlConnector", "tasks.max": "1", "database.hostname": "mysql", "database.port": "3306", "database.user": "debezium", "database.password": "dbz", "database.server.id": "184054", "database.server.name": "dbserver1", "database.whitelist": "inventory", "database.history.kafka.bootstrap.servers": "kafka:9092", "database.history.kafka.topic": "dbhistory.inventory" } }
-  ```
+</code></pre></div></div>
 
+<p>or in Postman call <code class="language-plaintext highlighter-rouge">localhost:8083/connectors/</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  { "name": "inventory-connector", "config": { "connector.class": "io.debezium.connector.mysql.MySqlConnector", "tasks.max": "1", "database.hostname": "mysql", "database.port": "3306", "database.user": "debezium", "database.password": "dbz", "database.server.id": "184054", "database.server.name": "dbserver1", "database.whitelist": "inventory", "database.history.kafka.bootstrap.servers": "kafka:9092", "database.history.kafka.topic": "dbhistory.inventory" } }
+</code></pre></div></div>
 
-### Start Ignite
-</code></pre>
-</div>
-<p>/repos/ignite-go-client/testdata
+<h3 id="start-ignite">Start Ignite</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/repos/ignite-go-client/testdata
 rm -rf /repos/apache-ignite-fabric-2.6.0-bin/work/ &amp;&amp; /repos/apache-ignite-fabric-2.6.0-bin/bin/ignite.sh ./custom-realtime.xml
-```</p>
+</code></pre></div></div>
 
 <h3 id="activate-ignite">Activate Ignite</h3>
-<div class="highlighter-rouge"><pre class="highlight"><code>cd /repos/apache-ignite-fabric-2.6.0-bin/bin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /repos/apache-ignite-fabric-2.6.0-bin/bin
 ./control.sh --activate --user ignite --password ignite
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="start-zeppelin">Start Zeppelin</h3>
-<div class="highlighter-rouge"><pre class="highlight"><code>/repos/zeppelin-0.8.0-bin-all/bin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/repos/zeppelin-0.8.0-bin-all/bin
 ./zeppelin-daemon.sh start
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="start-docker-consumer">Start Docker Consumer</h3>
-<div class="highlighter-rouge"><pre class="highlight"><code>/repos/irl/consumer
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/repos/irl/consumer
 docker run --rm --name rtconz   zexyphantom/conzumer
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="stop-docker-containers">Stop Docker Containers</h3>
-<div class="highlighter-rouge"><pre class="highlight"><code>docker stop rtconz connect mysql kafka zookeeper
-</code></pre>
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker stop rtconz connect mysql kafka zookeeper
+</code></pre></div></div>
 
 		</div>
 
