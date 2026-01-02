@@ -11,6 +11,8 @@
 	<title>{{ page.title }} - {{ site.name }}</title>
 	<meta name="application-name" content="{{ site.name }}"/>
 	<meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}" />
+
+	{% include seo.html %}
 </head>
 <body>
 	<div class="header">
