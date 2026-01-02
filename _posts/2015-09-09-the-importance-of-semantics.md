@@ -1,0 +1,20 @@
+---
+title: The Importance Of Semantics
+layout: post
+---
+
+
+The word *semantics* from the ancient greek is the meaning or the interpretation of a word, sentence, or other language form. It is important how we define events, the words we choose to portray things that effect our lives. The fact that we as a society fail at agreeing to define issues as they are is lamentable.
+<!--excerpt-->
+
+Words carry a great power. They can inspire people to do great things or incite descent into madness. Martin Luther King was a great speaker who used his oratorial powers to improve the lives of millions of people and the same oratorial skill in Adolf Hitler has driven an entire nation to perform unimaginable atrocities. Words carry great power, that has never been in dispute. It is how we frame the words that causes elation or grief.
+
+Anti-abortion is Pro-life. Anti-climate change is Pro-industry. Anti-gun control is Pro-freedom. Anti-terrorism is Pro-surveillance. __But a refugee is not a migrant.__ And it is the responsibility of the media to make that distinction. These two words cannot and should not be used as synonyms. A migrant is one that moves from one region to another by chance, instinct, or plan; A refugee is one who flees in search of refuge, as in times of war, political oppression, or religious persecution. What is happening right now in Europe is a refugee crisis. It is not a migrant crisis.
+
+Few media outlets have by this point taken a stand to refer to these people fleeing Syria as refugees but there remain many media outlets that are reluctant to use the word refugee. It pains me to find NPR, NYT in the latter group. The issue of semantics is important here because the word refugee provides protection to our brothers and sisters fleeing the war torn areas. According to the 1951 Refugee Convention agreed upon by all the nations of Europe a refugee cannot be turned back to the country of origin if their safety cannot be assured, the right not to be penalized for entering a country illegaly if they request asylum, the right to security, religious expression, primary education, free access to courts, equal treatment by the taxing authority. A migrant unlike a refugee can be turned back immediately to their country of origin.
+
+Until now the response of the European nations and that of the world has been woeful. These nations have made it difficult for refugees to enter Europe resulting in deaths of several hundreds of refugees while making perilious journeys [across the seas in dingy boats](http://www.nytimes.com/2015/09/03/world/middleeast/brutal-images-of-syrian-boy-drowned-off-turkey-must-be-seen-activists-say.html) and in [dangerously cramped trucks](http://www.nytimes.com/2015/08/28/world/europe/bodies-austria-truck-migrant-crisis.html?_r=0). Humanity needs to remember that borders are man-made constructs. Will the huge influx of refugees into Europe impact the political and economic situation? Of course it will, but it would be a travesty if we do not raise to handle that challenge and let people die because we are afraid that our suburban lives might be inconvenienced by people of different skin color that may not speak our language.
+
+We need to stop calling refugees as migrants. It's not just NPR, NYT but many many media companies especially in the US that are perpetuating the notion of a migrant crisis. I have only come across Al-Jazeera English taking a stand in using the word refugee. This decision should be lauded and replicated by others as well. It isn't just the stories we tell but the words we use that bring about change. I hope all the media houses wake up to this reality and change their practice in this regard even though it might be delayed. This is a moral obligation not a political calculation.
+
+If you wish to help the refugees fleeing the war torn areas, you can [make a donation to the UNHCR fund](http://donate.unhcr.org/international/general/#_ga=1.29610806.829388110.1441552177). [They need your donations](http://www.unhcr.org/558acbbc6.html).

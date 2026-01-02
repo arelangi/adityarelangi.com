@@ -1,19 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico?">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico?">
 	<link rel="stylesheet" href="{{ site.url }}/assets/css/skeleton/stylesheets/combined.css"/>
-	<title>{{ page.title }}</title>
-	<meta name="application-name" content="Aditya Relangi's Thoughts"/>
+	<title>{{ page.title }} - {{ site.name }}</title>
+	<meta name="application-name" content="{{ site.name }}"/>
 	<meta name="description" content="Aditya Relangi's blog"/>
-	<meta name=viewport content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<div class="header">
 		<div class="container">
-				{% for page in site.pages_list %}
-				  &nbsp;&nbsp;&nbsp;
-				  <a href="{{ page[1]  }}">{{ page[0] }}</a>
-				{% endfor %}
+			<a href="{{ site.url }}">Website</a>
+			<a href="{{ site.url }}/blog">Blog</a>
 		</div>
 	</div>
