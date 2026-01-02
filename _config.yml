@@ -1,5 +1,6 @@
 name: "Aditya Relangi"
 description: "Aditya Relangi's website"
+author: "Aditya Relangi"
 
 url: "https://adityarelangi.com"
 baseurl: ""
@@ -11,6 +12,7 @@ highlighter: rouge
 # Plugins
 plugins:
   - jekyll-paginate
+  - jekyll-feed
 
 # Pagination
 paginate: 10
