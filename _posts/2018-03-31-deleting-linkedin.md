@@ -1,7 +1,7 @@
 ---
 title: Deleting Linkedin
 layout: post
-tags: ["tech", "personal"]
+tags: ["personal"]
 ---
 
 

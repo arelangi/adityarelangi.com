@@ -1,7 +1,7 @@
 ---
 title: The Importance Of Semantics
 layout: post
-tags: ["personal", "writing"]
+tags: ["writing"]
 ---
 
 
