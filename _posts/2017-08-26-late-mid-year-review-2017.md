@@ -1,6 +1,7 @@
 ---
 title: 2017 - A Late Mid Year Review
 layout: post
+tags: ["personal", "year-review"]
 ---
 
 I wanted to do this mid-year but couldn't get around to this till now. Seeing as to how my initial plans aren't going as I planned, I felt this is a good time to reiew and revise this year's plans.

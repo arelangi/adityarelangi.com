@@ -1,6 +1,7 @@
 ---
 title:  Book Review - Red Rising
 layout: post
+tags: ["books"]
 ---
 
 The second book I read this year after Martian is also set on Mars. Haha.. Talk about variety. This book though is a sci-fi set in the dystopian future when man has conquered all of the solar system and is colonising different planets. I've enjoyed the book very much. Although, it does seem to be inspired by Hunger Games and Ender's game this book can stand on its own. I liked this book so much, I read the sequel immediately after finishing this.

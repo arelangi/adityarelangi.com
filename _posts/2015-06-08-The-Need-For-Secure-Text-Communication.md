@@ -1,6 +1,7 @@
 ---
 title: The Need for Secure Text Communication
 layout: post
+tags: ["personal"]
 ---
 
 Every human being has a right to privacy, given that we spend most of our lives online, maintaining that privacy in the digital world becomes even more important. The argument that one has to choose between privacy and security in a free world is inherently flawed. We cannot forget that privacy is freedom and a society that values security over privacy is not free at all.

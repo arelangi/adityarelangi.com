@@ -1,6 +1,7 @@
 ---
 title: Explaining The Weird On My Twitter Timeline
 layout: post
+tags: ["personal"]
 ---
 
 If any of you have in the recent past seen my Twitter timeline [@arelangi][profile] and are wondering what all the tweets are about, this post is for you.

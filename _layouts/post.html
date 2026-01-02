@@ -6,6 +6,13 @@
 		<time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
 			{{ page.date | date: "%B %-d, %Y" }}
 		</time>
+		{% if page.tags %}
+		<div class="post-tags">
+			{% for tag in page.tags %}
+			<a href="/tags#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+			{% endfor %}
+		</div>
+		{% endif %}
 	</header>
 
 	<div class="post-content">

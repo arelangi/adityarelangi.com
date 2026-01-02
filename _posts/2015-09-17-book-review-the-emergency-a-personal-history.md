@@ -1,6 +1,7 @@
 ---
 title:  Book Review - The Emergency A Personal History
 layout: post
+tags: ["books"]
 ---
 
 Coomi Kapoor's book The Emergency is something that I came across when I saw her [interview with Madhu Trehan on Newslaundry](http://www.newslaundry.com/2015/07/10/nl-interview-with-coomi-kapoor-part-1/). It was launched around the anniversary of the emergency. Let's get the first things out of the way. This is a memoir. The prose is simple, easy to read and flows easily. This should be read more for attaining a historical perspective rather than as an exploration of the language.

@@ -1,6 +1,7 @@
 ---
 title: Book Review - The Martian
 layout: post
+tags: ["books"]
 ---
 
 Wow, what a book! Amazing. Loved it all the way through. The pace never slackened, the plot never boring. Andy Weir pulled off a stunner. This book had me at Mars and it had me again at stranded alone on Mars.

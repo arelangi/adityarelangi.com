@@ -1,6 +1,7 @@
 ---
 title:  Book Review - Between The World And Me
 layout: post
+tags: ["books"]
 ---
 
 Ta-Nehisi Coates's letter to his fifteen year old son in the wake of acquittal of Michael Brown's murderers is a masterpiece. This is by far the best book I read this year and I doubt if any other books I might read this year might beat it. I do not remember how I came across this book, where I heard or read about it, but I am glad that I did.

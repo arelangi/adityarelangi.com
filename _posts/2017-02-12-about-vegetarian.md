@@ -1,6 +1,7 @@
 ---
 title: About Vegetarian
 layout: post
+tags: ["personal"]
 ---
 
 I wrote this email to the author Han Kang afer reading her book The Vegetarian. Unfortunately the email address listed on her website is not functioning, so I'm posting my email to her here. The Vegetarian is a beautiful and book and do read it if you chance upon it.

@@ -1,6 +1,7 @@
 ---
 title:  Book Review - How About Never?
 layout: post
+tags: ["books"]
 ---
 
 I recently finished Bob Mankoff's How About Never — Is Never Good for You?: A Life in Cartoons and it's an absolute delight

@@ -1,6 +1,7 @@
 ---
 title: 2015 - Looking Ahead!
 layout: post
+tags: ["personal", "year-review"]
 ---
 
 Welcome to yet another year. 2014 was transformative for me. I'm hoping to continue what I started in 2014, the groundwork has been laid, now I just need to stick to the plan and execute it. 

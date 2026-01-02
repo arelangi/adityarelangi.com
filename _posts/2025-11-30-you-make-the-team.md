@@ -1,6 +1,7 @@
 ---
 title: You make the team
 layout: post
+tags: [personal, work]
 ---
 
 We talk about great teams and great companies as if their excellence is something you inherit by joining them. As if the quality lives out there and all you need to do is step in for you to become excellent.

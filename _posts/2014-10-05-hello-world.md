@@ -1,6 +1,7 @@
 ---
 title: Hello World!
 layout: post
+tags: ["personal"]
 ---
 
 I've started so many blogs, so many times that I've lost count. Most of it might be because I was still trying to find myself. 

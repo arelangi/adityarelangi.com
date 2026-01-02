@@ -1,6 +1,7 @@
 ---
 title: On Writing
 layout: post
+tags: ["personal", "writing"]
 ---
 
 I've recently come across a Hindi translation of the poem _so you want to be a writer?_ by [Charles Bukowski](https://en.wikipedia.org/wiki/Charles_Bukowski). The translation is done by [Varun Grover](https://en.wikipedia.org/wiki/Varun_Grover_(writer)). I felt like sharing the original piece in its entirety as I struggle to turn my own thoughts into words. Here it is

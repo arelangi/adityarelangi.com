@@ -1,6 +1,7 @@
 ---
 title: Thinking beyond the ask
 layout: post
+tags: ["personal", "work"]
 ---
 
 In large organizations, work often arrives already shaped in the form of a ticket, a feature spec or a defined task. Each team owns a slice: product defines, engineering builds, analysts measure, ML tunes. It keeps things moving, but it also narrows how we think.

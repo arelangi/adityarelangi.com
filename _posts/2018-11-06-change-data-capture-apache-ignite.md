@@ -1,6 +1,7 @@
 ---
 title: Change Data Capture --> Kafka --> Go Consumer --> Apache Ignite --> Zeppelin
 layout: post
+tags: ["tech"]
 ---
 
 Setting up a realtime reporting framework with MySQL, Kafka Connect, Apache Kafka, Golang Consumer, Apache Ignite, Apache Zeppelin

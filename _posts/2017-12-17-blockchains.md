@@ -1,6 +1,7 @@
 ---
 title: On Blockchains
 layout: post
+tags: ["tech"]
 ---
 
 I think blockchains are a really important technology and are going to change the way applications are built. A lot of people have been trying to understand what they mean and whether they are missing out on all the cryptocoin boom. This meant I've spent quite some time trying to explain how these things work to a lot of people. Given that there's a lot of content that does a good job of explaining what blockchains are, how they work, why they are important, I do not feel the need to write another blockchain 101 post. So, I'm compiling a list I think would help in one's understanding of the blockchain.

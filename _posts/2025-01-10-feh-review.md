@@ -1,6 +1,7 @@
 ---
 title: Feh - A Memoir by Shalom Auslander - Review
 layout: post
+tags: ["personal"]
 ---
 
 [Shalom Auslander’s Feh](https://openlibrary.org/works/OL37590034W/Feh?edition=key%3A/books/OL50661555M) is a masterpiece of wit, despair, and, surprisingly, hope. It stands out as one of the most impactful books I’ve read in recent memory.

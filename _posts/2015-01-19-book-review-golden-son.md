@@ -1,6 +1,7 @@
 ---
 title: Book Review - Golden Son
 layout: post
+tags: ["books"]
 ---
 
 The Golden Son is the second book of The Red Rising trilogy by Pierce Brown. This book takes off two years after the end of events in Red Rising. I read this book immediately after finishing Red Rising. The Golden Son is a good sequel to Red Rising. Unlike the Hunger Games trilogy where each book got worse as the series progressed, this sequel is much better. The story is a as interesting as the first one. The writing exceptional.
