@@ -26,3 +26,16 @@ exclude:
   - .git
   - .gitignore
   - README.md
+
+# HTML Compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+# Performance optimizations
+sass:
+  style: compressed
